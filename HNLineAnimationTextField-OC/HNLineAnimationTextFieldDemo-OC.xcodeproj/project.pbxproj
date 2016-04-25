@@ -18,6 +18,8 @@
 		E03FA95D1CCCAFE50092CD7C /* UIWindow+HNHierarchy.m in Sources */ = {isa = PBXBuildFile; fileRef = E03FA95C1CCCAFE50092CD7C /* UIWindow+HNHierarchy.m */; };
 		E03FA9601CCCE4080092CD7C /* HNLineAnimationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E03FA95F1CCCE4080092CD7C /* HNLineAnimationManager.m */; };
 		E03FA9631CCD072F0092CD7C /* HNLineShapeLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E03FA9621CCD072F0092CD7C /* HNLineShapeLayer.m */; };
+		E07508E41CCE4FC3002FAA76 /* HNBouncyPlaceholderTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = E07508E11CCE4FC3002FAA76 /* HNBouncyPlaceholderTextField.m */; };
+		E07508E51CCE4FC3002FAA76 /* HNPlaceholderLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = E07508E31CCE4FC3002FAA76 /* HNPlaceholderLabel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +43,10 @@
 		E03FA95F1CCCE4080092CD7C /* HNLineAnimationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HNLineAnimationManager.m; path = ../Categories/HNLineAnimationManager.m; sourceTree = "<group>"; };
 		E03FA9611CCD072F0092CD7C /* HNLineShapeLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HNLineShapeLayer.h; path = ../HNLineShapeLayer.h; sourceTree = "<group>"; };
 		E03FA9621CCD072F0092CD7C /* HNLineShapeLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HNLineShapeLayer.m; path = ../HNLineShapeLayer.m; sourceTree = "<group>"; };
+		E07508E01CCE4FC3002FAA76 /* HNBouncyPlaceholderTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNBouncyPlaceholderTextField.h; sourceTree = "<group>"; };
+		E07508E11CCE4FC3002FAA76 /* HNBouncyPlaceholderTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNBouncyPlaceholderTextField.m; sourceTree = "<group>"; };
+		E07508E21CCE4FC3002FAA76 /* HNPlaceholderLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HNPlaceholderLabel.h; sourceTree = "<group>"; };
+		E07508E31CCE4FC3002FAA76 /* HNPlaceholderLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HNPlaceholderLabel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +79,7 @@
 		E03FA93C1CCC70590092CD7C /* HNLineAnimationTextFieldDemo-OC */ = {
 			isa = PBXGroup;
 			children = (
+				E07508DF1CCE4FC3002FAA76 /* HNBouncyPlaceholderTextFieldLib */,
 				E07508DE1CCDCA03002FAA76 /* HNLineAnimationTextField */,
 				E03FA9401CCC70590092CD7C /* AppDelegate.h */,
 				E03FA9411CCC70590092CD7C /* AppDelegate.m */,
@@ -119,6 +126,17 @@
 				E03FA9541CCC70CD0092CD7C /* Categories */,
 			);
 			path = HNLineAnimationTextField;
+			sourceTree = "<group>";
+		};
+		E07508DF1CCE4FC3002FAA76 /* HNBouncyPlaceholderTextFieldLib */ = {
+			isa = PBXGroup;
+			children = (
+				E07508E01CCE4FC3002FAA76 /* HNBouncyPlaceholderTextField.h */,
+				E07508E11CCE4FC3002FAA76 /* HNBouncyPlaceholderTextField.m */,
+				E07508E21CCE4FC3002FAA76 /* HNPlaceholderLabel.h */,
+				E07508E31CCE4FC3002FAA76 /* HNPlaceholderLabel.m */,
+			);
+			path = HNBouncyPlaceholderTextFieldLib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,10 +213,12 @@
 				E03FA9571CCC70FC0092CD7C /* NSArray+HNSort.m in Sources */,
 				E03FA9631CCD072F0092CD7C /* HNLineShapeLayer.m in Sources */,
 				E03FA9451CCC70590092CD7C /* ViewController.m in Sources */,
+				E07508E41CCE4FC3002FAA76 /* HNBouncyPlaceholderTextField.m in Sources */,
 				E03FA95A1CCC76A00092CD7C /* UIView+HNHierarchy.m in Sources */,
 				E03FA9421CCC70590092CD7C /* AppDelegate.m in Sources */,
 				E03FA9601CCCE4080092CD7C /* HNLineAnimationManager.m in Sources */,
 				E03FA93F1CCC70590092CD7C /* main.m in Sources */,
+				E07508E51CCE4FC3002FAA76 /* HNPlaceholderLabel.m in Sources */,
 				E03FA95D1CCCAFE50092CD7C /* UIWindow+HNHierarchy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
