@@ -42,7 +42,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wer-0x-jLo" customClass="HNBouncyPlaceholderTextField">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wer-0x-jLo">
                                 <rect key="frame" x="70" y="224" width="460" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Dd3-ia-5Oq"/>
@@ -81,7 +81,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="83" y="381"/>
+            <point key="canvasLocation" x="34" y="366"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ClD-Lx-0bY">

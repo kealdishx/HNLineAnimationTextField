@@ -18,10 +18,6 @@
 
 @property (nonatomic,weak) UIView *previousTextFieldView;
 
-@property (nonatomic,assign) BOOL isTextFieldViewFrameChanged;
-
-@property (nonatomic,assign) CGFloat animationDuration;
-
 @property (nonatomic,assign) BOOL lineExist;
 
 @property (nonatomic,strong) NSArray *respondSiblings;
@@ -74,6 +70,7 @@
     }
 }
 
+#pragma mark - lazy
 - (UIView *)loadingView{
     if (!_loadingView) {
         _loadingView = [[UIView alloc] init];
@@ -116,6 +113,9 @@
             else{
                 [self drawStartLineOnView:_textfieldView];
             }
+        }
+        else {
+            NSLog(@"animation configure error");
         }
         
     }
@@ -166,15 +166,14 @@
     animationLayer.lineWidth = _lineWidth;
     animationLayer.strokeColor = _lineColor.CGColor;
     UIBezierPath *path = [UIBezierPath bezierPath];
-    [path moveToPoint:CGPointMake(previousFrame.origin.x, CGRectGetMaxY(previousFrame))];
+    [path moveToPoint:CGPointMake(previousFrame.origin.x, CGRectGetMaxY(previousFrame) - _lineWidth)];
     [path addLineToPoint:CGPointMake(CGRectGetMaxX(previousFrame), CGRectGetMaxY(previousFrame) - _lineWidth)];
-
     CGFloat radius = [self linePathAddArcWithPath:path];
     [path addLineToPoint:CGPointMake(presentFrame.origin.x, CGRectGetMaxY(presentFrame) - _lineWidth)];
     animationLayer.path = path.CGPath;
     [controllerView.layer addSublayer:animationLayer];
     
-    CGFloat totalLength = radius * M_PI + + previousFrame.size.width + presentFrame.size.width;
+    CGFloat totalLength = radius * M_PI + previousFrame.size.width + presentFrame.size.width;
     CGFloat startLinePercent = previousFrame.size.width / totalLength * 1.0;
     CGFloat endLinePercent = presentFrame.size.width / totalLength * 1.0;
     CABasicAnimation *strokeStartAnimation = [CABasicAnimation animationWithKeyPath:@"strokeStart"];
@@ -184,7 +183,7 @@
     strokeStartAnimation.delegate = self;
     strokeStartAnimation.duration = 0.4f;
     strokeStartAnimation.fromValue = @[@0.0];
-    strokeStartAnimation.toValue = @[@(1 - endLinePercent)];
+    strokeStartAnimation.toValue = @[@(1.0 - endLinePercent)];
     CABasicAnimation *strokeEndAnimation = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
     strokeEndAnimation.removedOnCompletion = NO;
     strokeEndAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
@@ -271,6 +270,7 @@
     if (_lineExist) {
         HNLineShapeLayer *layer = (HNLineShapeLayer *)[self existlineShapeLayerOnView:_previousTextFieldView];
         if (layer) {
+            [layer removeAllAnimations];
             [layer removeFromSuperlayer];
         }
     }
@@ -359,7 +359,7 @@
     circleAnimation.repeatCount = HUGE_VALF;
     circleAnimation.autoreverses = YES;
     circleAnimation.duration = 0.6f;
-    circleAnimation.beginTime = CACurrentMediaTime() + 0.9;
+    circleAnimation.beginTime = CACurrentMediaTime() + 0.85;
     
     _animating = YES;
     [_textfieldView resignFirstResponder];
@@ -382,8 +382,8 @@
         return;
     }
     UIView *loadingView = self.loadingView;
+    HNLineShapeLayer *layer = (HNLineShapeLayer *)[self existlineShapeLayerOnView:loadingView];
     [UIView animateWithDuration:0.3f animations:^{
-        HNLineShapeLayer *layer = (HNLineShapeLayer *)[self existlineShapeLayerOnView:loadingView];
         if (layer) {
             [layer removeAllAnimations];
             [layer removeFromSuperlayer];
