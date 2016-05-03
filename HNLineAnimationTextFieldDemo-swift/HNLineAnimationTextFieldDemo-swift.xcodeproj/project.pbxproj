@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E0E557A01CD219A400DC03EE /* HNBouncyPlaceholderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0E5579F1CD219A400DC03EE /* HNBouncyPlaceholderTextField.swift */; };
 		E0F835141CCF13C1009532E6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F835131CCF13C1009532E6 /* AppDelegate.swift */; };
 		E0F835161CCF13C1009532E6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0F835151CCF13C1009532E6 /* ViewController.swift */; };
 		E0F835191CCF13C1009532E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0F835171CCF13C1009532E6 /* Main.storyboard */; };
@@ -21,7 +20,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E0E5579F1CD219A400DC03EE /* HNBouncyPlaceholderTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HNBouncyPlaceholderTextField.swift; sourceTree = "<group>"; };
 		E0F835101CCF13C1009532E6 /* HNLineAnimationTextFieldDemo-swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HNLineAnimationTextFieldDemo-swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0F835131CCF13C1009532E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0F835151CCF13C1009532E6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,14 +45,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		E0E5579E1CD219A400DC03EE /* HNBouncyPlaceholderTextField */ = {
-			isa = PBXGroup;
-			children = (
-				E0E5579F1CD219A400DC03EE /* HNBouncyPlaceholderTextField.swift */,
-			);
-			path = HNBouncyPlaceholderTextField;
-			sourceTree = "<group>";
-		};
 		E0F835071CCF13C1009532E6 = {
 			isa = PBXGroup;
 			children = (
@@ -74,7 +64,6 @@
 		E0F835121CCF13C1009532E6 /* HNLineAnimationTextFieldDemo-swift */ = {
 			isa = PBXGroup;
 			children = (
-				E0E5579E1CD219A400DC03EE /* HNBouncyPlaceholderTextField */,
 				E0F835251CCF13FB009532E6 /* HNLineAnimationTextField */,
 				E0F835131CCF13C1009532E6 /* AppDelegate.swift */,
 				E0F835151CCF13C1009532E6 /* ViewController.swift */,
@@ -181,7 +170,6 @@
 				E0F835301CCF53CF009532E6 /* HNLineAnimationManager.swift in Sources */,
 				E0F835321CCF55A5009532E6 /* HNLineShapeLayer.swift in Sources */,
 				E0F835281CCF15A6009532E6 /* Array+HNSort.swift in Sources */,
-				E0E557A01CD219A400DC03EE /* HNBouncyPlaceholderTextField.swift in Sources */,
 				E0F835161CCF13C1009532E6 /* ViewController.swift in Sources */,
 				E0F835141CCF13C1009532E6 /* AppDelegate.swift in Sources */,
 				E0F8352C1CCF3F40009532E6 /* UIView+HNHierarchy.swift in Sources */,

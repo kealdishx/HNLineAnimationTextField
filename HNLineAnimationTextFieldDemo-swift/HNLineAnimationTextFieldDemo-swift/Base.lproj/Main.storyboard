@@ -34,29 +34,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3LT-JF-d7z" customClass="HNBouncyPlaceholderTextField" customModule="HNLineAnimationTextFieldDemo_swift" customModuleProvider="target">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3LT-JF-d7z">
                                 <rect key="frame" x="70" y="164" width="460" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="uVb-x7-uzP"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="alwaysBouncePlaceholder" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="abbreviatedPlaceholder" value="Email"/>
-                                </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="taz-CB-N7e" customClass="HNBouncyPlaceholderTextField" customModule="HNLineAnimationTextFieldDemo_swift" customModuleProvider="target">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="taz-CB-N7e">
                                 <rect key="frame" x="70" y="224" width="460" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="nNA-4K-uMI"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="alwaysBouncePlaceholder" value="YES"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="abbreviatedPlaceholder" value="Password"/>
-                                </userDefinedRuntimeAttributes>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KkZ-rk-xhW">
                                 <rect key="frame" x="65" y="318" width="67" height="47"/>
